@@ -8,6 +8,7 @@ namespace Character
     {
         private Rigidbody _elCuerpoRijido;
 
+        [SerializeField] private Animator _animator;
         [SerializeField] private float _velocidad;
 
         protected override void Magnana()
@@ -34,6 +35,19 @@ namespace Character
             Vector3 newVelocity =
                 new Vector3(move.x * _velocidad, _elCuerpoRijido.linearVelocity.y, move.z * _velocidad);
             _elCuerpoRijido.linearVelocity = newVelocity;
+
+            UpdateAnimation();
+        }
+
+        private void UpdateAnimation()
+        {
+            if (_elCuerpoRijido.linearVelocity != Vector3.zero)
+            {
+                _animator.SetFloat("velocidad", 1);
+                return;
+            }
+
+            _animator.SetFloat("velocidad", 0);
         }
     }
 }
