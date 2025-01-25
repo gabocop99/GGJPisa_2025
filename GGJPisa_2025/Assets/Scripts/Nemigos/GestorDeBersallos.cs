@@ -1,11 +1,17 @@
 using System.Collections.Generic;
-using Nemigos;
 using Spanish;
+using UnityEngine;
 
-public class GestorDeBersallos : SoltieroComportamiento
+namespace Nemigos
 {
-    public List<Bersallo> Bersallos;
+    public class GestorDeBersallos : SoltieroComportamiento
+    {
+        public List<Bersallo> Bersallos;
+        [SerializeField] private Transform[] _bersallosTransform;
 
-
-    
+        protected override void Empieza()
+        {
+            //Inizializza le cavidad, 
+        }
+    }
 }
