@@ -1,6 +1,7 @@
 using System;
 using Spanish;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Nemigos
 {
@@ -8,7 +9,7 @@ namespace Nemigos
     public class Bersallo : SoltieroComportamiento
     {
         public event Action SulBersalloColpipdo;
-        public event Action SulBersalloDestructo;
+        public event Action BersalloDestruido;
 
 
         private Rigidbody _rb;
@@ -16,8 +17,6 @@ namespace Nemigos
 
         [SerializeField] private float _puntosVida;
 
-
-        //private 
 
         // nemico variabii: hp (numero di punti deboli), velocità, knockback force
         // moltiplicatore velocità per cambiamento stato
@@ -50,8 +49,9 @@ namespace Nemigos
                 return;
             }
 
-            SulBersalloDestructo?.Invoke();
+            BersalloDestruido?.Invoke();
             DisactivaElTrigger();
+            
         }
 
         private void DisactivaElTrigger()
