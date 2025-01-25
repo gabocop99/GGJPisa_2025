@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30904be482e463b9aeab207f83e2c34, type: 3}
   m_Name: LaBolla
   m_EditorClassIdentifier: 
-  _velocidad: 5
+  _velocidad: 8
   _tiempoDeVida: 5

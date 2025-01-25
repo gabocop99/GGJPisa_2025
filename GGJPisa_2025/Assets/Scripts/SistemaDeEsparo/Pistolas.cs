@@ -51,7 +51,7 @@ namespace SistemaDeEsparo
 
         private IEnumerator EspararCoroutine()
         {
-            Instantiate(_bolla, _puntoDeEsparo.position, _puntoDeEsparo.rotation);
+            var nuevabolla = Instantiate(_bolla, _puntoDeEsparo.position, _puntoDeEsparo.rotation);
             _municionesActual--;
             yield return new WaitForSeconds(_ritardoDeUnColpoElAltro);
             _esparoCoroutine = null;
