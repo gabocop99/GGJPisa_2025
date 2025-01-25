@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 372590648396577080}
   - component: {fileID: 4570769903978519194}
+  - component: {fileID: 9200707227747051013}
   m_Layer: 0
   m_Name: Pistola
   m_TagString: Untagged
@@ -94,6 +95,28 @@ MonoBehaviour:
   _maxMuniciones: 100
   _tiempoDeRecarga: 0.2
   _ritardoDeUnColpoElAltro: 0.4
+--- !u!95 &9200707227747051013
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687756762264748764}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c55292474dfd1b142827450140ea058a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &7026682176439456970
 PrefabInstance:
   m_ObjectHideFlags: 0
