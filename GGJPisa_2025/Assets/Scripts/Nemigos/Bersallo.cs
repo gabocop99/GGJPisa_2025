@@ -50,13 +50,13 @@ namespace Nemigos
             }
 
             BersalloDestruido?.Invoke();
-            DisactivaElTrigger();
+            DestrujeElBersallo();
             
         }
 
-        private void DisactivaElTrigger()
+        private void DestrujeElBersallo()
         {
-            _col.enabled = false;
+            gameObject.SetActive(false);
             Debug.Log("Disactiva el trigger");
         }
 
