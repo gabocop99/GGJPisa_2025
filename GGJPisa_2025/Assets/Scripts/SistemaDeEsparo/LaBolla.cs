@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using Character;
-using Patterns;
 using Spanish;
+using Suenos;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace SistemaDeEsparo
@@ -13,6 +15,10 @@ namespace SistemaDeEsparo
 
         [SerializeField] private float _rimbalzoAmplitude;
         [SerializeField] private float _rimbalzoPeriodo;
+
+        [SerializeField] private string _estringaPorSuono = "bolla";
+
+        public UnityEvent Eviento;
 
         private float _timer = 0f;
 
@@ -59,17 +65,26 @@ namespace SistemaDeEsparo
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.TryGetComponent<MovimientoDeJugadore>(out var movimientoDeJugador))
+            var jugador = other.GetComponent<MovimientoDeJugadore>();
+
+            if (jugador == null)
             {
-                Destroy(gameObject);
+                var mesh = GetComponentInChildren<MeshRenderer>();
+
+                if (mesh != null)
+                {
+                    mesh.enabled = false;
+                    StartCoroutine(MataloCoroutine());
+                }
             }
         }
-    }
-}
 
-public class AudiosManajer : Solidario<AudiosManajer>
-{
-    public void ReproducirSuenoEnLoco()
-    {
+        private IEnumerator MataloCoroutine()
+        {
+            Eviento?.Invoke();
+            AudiosManajer.Istanzia.ReproducirSuenoEnLugar(_estringaPorSuono, transform);
+            yield return new WaitForSeconds(1f);
+            Destroy(gameObject);
+        }
     }
 }
