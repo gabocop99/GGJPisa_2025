@@ -1,5 +1,7 @@
-﻿using Spanish;
-using Unity.Mathematics;
+﻿using System;
+using Character;
+using Patterns;
+using Spanish;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,7 +15,6 @@ namespace SistemaDeEsparo
         [SerializeField] private float _rimbalzoPeriodo;
 
         private float _timer = 0f;
-        private float _offsetRandomico;
 
         private Vector3 _startPositiones;
 
@@ -22,8 +23,6 @@ namespace SistemaDeEsparo
         protected override void Magnana()
         {
             _startPositiones = transform.position;
-
-            _offsetRandomico = Random.Range(0f, 2f) * Mathf.PI;
 
             _timer = 0f;
 
@@ -57,5 +56,20 @@ namespace SistemaDeEsparo
                 transform.position = new Vector3(transform.position.x, nuevaY, transform.position.z);
             }
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!other.TryGetComponent<MovimientoDeJugadore>(out var movimientoDeJugador))
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+}
+
+public class AudiosManajer : Solidario<AudiosManajer>
+{
+    public void ReproducirSuenoEnLoco()
+    {
     }
 }
