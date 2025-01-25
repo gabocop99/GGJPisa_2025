@@ -400,6 +400,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3721466298591909918, guid: 3a07e1be619c6b94780e01f24b153733, type: 3}
+      propertyPath: _maxMuniciones
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721466298591909918, guid: 3a07e1be619c6b94780e01f24b153733, type: 3}
+      propertyPath: _tiempoDeRecarga
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
