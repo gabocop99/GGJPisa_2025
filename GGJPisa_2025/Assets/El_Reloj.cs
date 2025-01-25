@@ -17,8 +17,8 @@ using TMPro;
     void Update()
     {
         currentHour += Time.deltaTime;
-
-        timeText.text = currentHour.ToString("F00");
+        
+        timeText.text = string.Format("{0:00}:{1:00}", Mathf.Floor(currentHour / 60), currentHour % 60);
 
         if(currentHour >= endHour) 
         {
