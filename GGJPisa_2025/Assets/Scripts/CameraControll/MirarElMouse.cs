@@ -1,8 +1,9 @@
+using Spanish;
 using UnityEngine;
 
 namespace CameraControll
 {
-    public class MirarElMouse : MonoBehaviour
+    public class MirarElMouse : SoltieroComportamiento
     {
         [SerializeField] private float _sensibilidadX; // Adjust mouse sensitivity
         [SerializeField] private float _sensibilidadY;

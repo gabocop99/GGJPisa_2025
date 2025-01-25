@@ -1,10 +1,11 @@
+using Spanish;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Character
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class MovimientoDeJugadore : MonoBehaviour
+    public class MovimientoDeJugadore : SoltieroComportamiento
     {
         private Rigidbody _elRb;
 
