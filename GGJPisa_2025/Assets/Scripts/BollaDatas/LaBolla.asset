@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LaBolla
   m_EditorClassIdentifier: 
   _velocidad: 8
-  _tiempoDeVida: 5
+  _tiempoDeVida: 1

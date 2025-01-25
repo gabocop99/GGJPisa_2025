@@ -1,22 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
-public class NewMonoBehaviourScript : MonoBehaviour
+public class ElBoton : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void QuitarAplicacion()
+    public void IniciaPartida()
+    {
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    // Update is called once per frame
+    public void QuitarAplicacion()
     {
         Application.Quit();
     }
 
-    // Update is called once per frame
-    void IniciaPartida()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    void AbrirOpciones()
+    public void AbrirOpciones()
     {
         Debug.Log("menu is clicked");
     }
