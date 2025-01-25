@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _datas: {fileID: 11400000, guid: fec9469c8c5e85449be782f8bcd3640a, type: 2}
-  _rimbalzoAmplitude: 1
-  _rimbalzoPeriodo: 4
+  _rimbalzoAmplitude: 0.2
+  _rimbalzoPeriodo: 10
 --- !u!33 &7878986543625031934
 MeshFilter:
   m_ObjectHideFlags: 0
