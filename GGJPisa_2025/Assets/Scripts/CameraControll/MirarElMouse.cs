@@ -11,12 +11,12 @@ namespace CameraControll
         [SerializeField] private float _angoloMaximos; //Max rotation for up and down look
         private float _rotacionX = 0f;
 
-        private void Start()
+        protected override void Empieza()
         {
             Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the screen
         }
 
-        private void Update()
+        protected override void Ajornamiendo()
         {
             MiraElMouse();
         }

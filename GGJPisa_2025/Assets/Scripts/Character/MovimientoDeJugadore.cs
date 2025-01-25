@@ -1,6 +1,5 @@
 using Spanish;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Character
 {
@@ -11,7 +10,7 @@ namespace Character
 
         [SerializeField] private float _velocidad;
 
-        private void Awake()
+        protected override void Magnana()
         {
             _elRb = GetComponent<Rigidbody>();
             if (!_elRb)
@@ -24,7 +23,7 @@ namespace Character
                                 RigidbodyConstraints.FreezeRotationY;
         }
 
-        private void Update()
+        protected override void Ajornamiendo()
         {
             if (!_elRb) return;
 
