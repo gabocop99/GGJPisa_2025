@@ -1,5 +1,6 @@
 using System.Collections;
 using Spanish;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace SistemaDeEsparo

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Character;
 using Spanish;
 using Suenos;
 using UnityEngine;
 using UnityEngine.Events;
-using Random = UnityEngine.Random;
 
 namespace SistemaDeEsparo
 {
@@ -22,44 +20,22 @@ namespace SistemaDeEsparo
 
         private float _timer = 0f;
 
-        private Vector3 _startPositiones;
-
         private int _random;
 
         protected override void Magnana()
         {
-            _startPositiones = transform.position;
-
             _timer = 0f;
-
-            _random = Random.Range(0, 2);
         }
 
         protected override void Ajornamiendo()
         {
             _timer += Time.deltaTime;
 
-            transform.Translate(Vector3.forward * (_datas.Velocidad * Time.deltaTime), Space.Self);
+            transform.Translate(Vector3.forward * (_datas.Velocidad * Time.deltaTime));
 
             if (_timer >= _datas.TiempoDeVida)
             {
                 Destroy(gameObject);
-            }
-
-
-            if (_random == 0)
-            {
-                var newY = _startPositiones.y +
-                           Mathf.Sin(_timer * _rimbalzoPeriodo) * _rimbalzoAmplitude;
-
-                transform.position = new Vector3(transform.position.x, newY, transform.position.z);
-            }
-            else
-            {
-                var nuevaY = _startPositiones.y -
-                             Mathf.Sin(_timer * _rimbalzoPeriodo) * _rimbalzoAmplitude;
-
-                transform.position = new Vector3(transform.position.x, nuevaY, transform.position.z);
             }
         }
 
@@ -70,6 +46,13 @@ namespace SistemaDeEsparo
             if (jugador == null)
             {
                 var mesh = GetComponentInChildren<MeshRenderer>();
+
+                var elColidero = GetComponent<Collider>();
+
+                if (elColidero != null)
+                {
+                    elColidero.enabled = false;
+                }
 
                 if (mesh != null)
                 {
