@@ -1,9 +1,8 @@
-using System.Collections;
 using UnityEngine;
 
 namespace Spanish
 {
-    public class SoltieroComportamiento : MonoBehaviour
+    public abstract class SoltieroComportamiento : MonoBehaviour
     {
         private void Awake()
         {
@@ -18,11 +17,6 @@ namespace Spanish
         private void Update()
         {
             Ajornamiendo();
-        }
-
-        protected void IniziaProceso(IEnumerator coroutine)
-        {
-            StartCoroutine(coroutine);
         }
 
         protected virtual void Ajornamiendo()
