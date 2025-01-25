@@ -1,4 +1,5 @@
 using System;
+using SistemaDeEsparo;
 using Spanish;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -62,11 +63,16 @@ namespace Nemigos
 
         private void OnTriggerEnter(Collider other)
         {
+            if (!other.GetComponent<LaBolla>())
+            {
+                return;
+            }
+            
             SulBersalloColpipdo?.Invoke();
-
             TomaDanno();
 
             Debug.Log("SulBersallo Colpipdo");
+
         }
     }
 }
