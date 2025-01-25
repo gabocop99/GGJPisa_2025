@@ -133,9 +133,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5606419342050523890}
+  - component: {fileID: 5745036373752921403}
+  - component: {fileID: 7003021650406483385}
+  - component: {fileID: 6028668411607474484}
   - component: {fileID: 4124412153401105157}
   - component: {fileID: 1998293152598371001}
-  - component: {fileID: 6028668411607474484}
   m_Layer: 0
   m_Name: Nemigo
   m_TagString: Untagged
@@ -159,6 +161,45 @@ Transform:
   - {fileID: 8455031711337705473}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5745036373752921403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4555936088883483424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d2d0aceb784364b962e272dd5a5a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7003021650406483385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4555936088883483424}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f644c232dcf4246a4fda90d9c2138b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _liberdadRadius: 5
+--- !u!114 &6028668411607474484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4555936088883483424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6367e9ca0e27e5438057dcafef32c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waitTimeAtPoint: 0
+  _puntosDePatrulla: []
 --- !u!114 &4124412153401105157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,20 +245,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6028668411607474484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4555936088883483424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6367e9ca0e27e5438057dcafef32c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waitTimeAtPoint: 0
-  _puntosDePatrulla: []
 --- !u!1 &5164715823583848032
 GameObject:
   m_ObjectHideFlags: 0
