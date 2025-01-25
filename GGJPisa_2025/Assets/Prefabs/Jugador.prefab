@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 731335339375495950}
   - component: {fileID: 6834824961944907258}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Jugador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67249fcbb1492844c94287bd7d7d8cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
+  _velocidad: 0
 --- !u!136 &731335339375495950
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 2145084408881080905}
   - component: {fileID: 4644913505484269262}
   m_Layer: 0
-  m_Name: CameraHolder
+  m_Name: ContenidorDeCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,10 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993544f9c1096e4408051927ff913502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseSensitivityX: 500
-  _mouseSensitivityY: 500
-  _playerBody: {fileID: 2720278095164312419}
-  _maxAngle: 50
+  _sensibilidadX: 200
+  _sensibilidadY: 200
+  _jugadorCuerpo: {fileID: 2720278095164312419}
+  _angoloMaximos: 50
 --- !u!1 &3923749217243026507
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 1916042103426021297}
   - component: {fileID: 5269268591884851973}
   m_Layer: 0
-  m_Name: Graphics
+  m_Name: El Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
