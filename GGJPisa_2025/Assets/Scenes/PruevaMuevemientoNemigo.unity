@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4124412153401105157, guid: 54a34b6204530934ebb4343e44bb8091, type: 3}
       propertyPath: _cuantosBersallos
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4359969542312998107, guid: 54a34b6204530934ebb4343e44bb8091, type: 3}
       propertyPath: m_Enabled
