@@ -16,9 +16,8 @@ namespace ElevadorSistema
                 LoadNextScene();
             }
         }
-
-
-        private void LoadNextScene()
+        
+        public void LoadNextScene()
         {
             // Ottieni l'indice della scena attuale
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;

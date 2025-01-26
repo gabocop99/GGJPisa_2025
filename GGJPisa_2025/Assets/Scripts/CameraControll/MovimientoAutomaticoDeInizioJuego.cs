@@ -3,6 +3,7 @@ using ElevadorSistema;
 using Sirenix.OdinInspector;
 using Spanish;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace CameraControll
 {
@@ -12,6 +13,8 @@ namespace CameraControll
         public Transform Destinationes;
 
         private Coroutine movimiento;
+
+        public UnityEvent OnMovimientoTerminado;
 
         protected override void Magnana()
         {
@@ -37,6 +40,10 @@ namespace CameraControll
             }
 
             movimiento = null;
+
+            yield return new WaitForSeconds(3.5f);
+
+            OnMovimientoTerminado?.Invoke();
         }
     }
 }
