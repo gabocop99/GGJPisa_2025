@@ -9,6 +9,7 @@ namespace Nemigos
         private GestorDeBersallos _gestorDeBersallos;
         private ComportamientoDePatrulla _comportamientoDePatrulla;
         private ComportamientoDeLiberdad _comportamientoDeLiberdad;
+        public bool IsHappy = false;
         
         protected override void Magnana()
         {
@@ -23,6 +24,7 @@ namespace Nemigos
             //change state
             _comportamientoDePatrulla.enabled = false;
             _comportamientoDeLiberdad.enabled = true;
+            IsHappy = true;
         }
     }
 }
