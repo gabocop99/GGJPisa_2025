@@ -10,6 +10,7 @@ namespace Character
     public class MovimientoDeJugadore : SoltieroComportamiento
     {
         public event Action JugadorColpido;
+        public event Action JugadorRinsavido;
 
         public Rigidbody ElCuerpoRigido => _elCuerpoRijido;
 
@@ -65,6 +66,7 @@ namespace Character
         {
             _puedeMover = false;
             yield return new WaitForSeconds(_stunStatoTiempo);
+            JugadorRinsavido?.Invoke();
             _puedeMover = true;
         }
 
