@@ -1,5 +1,6 @@
 using System.Collections;
 using Spanish;
+using Suenos;
 using UnityEngine;
 
 namespace SistemaDeEsparo
@@ -58,13 +59,19 @@ namespace SistemaDeEsparo
         {
             Instantiate(_bolla, _puntoDeEsparo.position, _puntoDeEsparo.rotation);
             _elMunicionasBoss.MunicionasCorenteNelCarigador--;
+
+            if (_elMunicionasBoss.MunicionasCorenteNelCarigador == 0)
+            {
+                AudiosManajer.Istanzia.ReproducirSuenoEnLugar("vueto", transform);
+            }
+
             yield return new WaitForSeconds(_ritardoDeUnColpoElAltro);
             _esparoCoroutine = null;
         }
 
         private IEnumerator RecargarCoroutine()
         {
-            Debug.Log("Recargando");
+            AudiosManajer.Istanzia.ReproducirSuenoEnLugar("recarga", transform);
             yield return new WaitForSeconds(_tiempoDeRecarga);
             _elMunicionasBoss.Recargar();
             _recargarCoroutine = null;
