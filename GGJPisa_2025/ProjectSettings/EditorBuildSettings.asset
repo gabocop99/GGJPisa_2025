@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CameraTest.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/TestLivello1.unity
+    guid: a360c7165e0f9264b87ad69e71e7aac0
+  - enabled: 1
+    path: Assets/Scenes/TestLivello2.unity
+    guid: c5b34f191cb94684b82295b68862ecc3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

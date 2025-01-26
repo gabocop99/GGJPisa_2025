@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _datas: {fileID: 11400000, guid: fec9469c8c5e85449be782f8bcd3640a, type: 2}
-  _rimbalzoAmplitude: 0.2
+  _rimbalzoAmplitude: 0.1
   _rimbalzoPeriodo: 10
   _estringaPorSuono: bolla
   Eviento:

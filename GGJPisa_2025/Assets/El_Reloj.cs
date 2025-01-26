@@ -8,9 +8,11 @@ using TMPro;
     public float startingHour;
     public TextMeshProUGUI timeText;
     public float endHour;
+    public GameObject GameOverMenu;
     
     void Start()
     {
+        Time.timeScale = 1;
         currentHour = startingHour;
     }
 
@@ -24,7 +26,9 @@ using TMPro;
         {
 
             Time.timeScale = 0;
-            //GameOverMenu.setActive(true);
+            GameOverMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None; // Sblocca il cursore
+            Cursor.visible = true; // Mostra il cursore
             Debug.Log("open lose menu");
         }
     }

@@ -126,6 +126,7 @@ MonoBehaviour:
   startingHour: 180
   timeText: {fileID: 5307652195501293533}
   endHour: 10
+  GameOverMenu: {fileID: 0}
 --- !u!1 &3492149454753389751
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +140,7 @@ GameObject:
   - component: {fileID: 1126196106464002425}
   - component: {fileID: 4732093643682357669}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: RelojText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
