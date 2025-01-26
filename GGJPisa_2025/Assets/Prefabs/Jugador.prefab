@@ -427,6 +427,14 @@ PrefabInstance:
       propertyPath: fillController
       value: 
       objectReference: {fileID: 3242355324888257012}
+    - target: {fileID: 1584088152418122235, guid: 3f237796918001149bdade9eac7d05e6, type: 3}
+      propertyPath: chargerFillController
+      value: 
+      objectReference: {fileID: 3242355324888257012}
+    - target: {fileID: 1584088152418122235, guid: 3f237796918001149bdade9eac7d05e6, type: 3}
+      propertyPath: InventoryFillController
+      value: 
+      objectReference: {fileID: 2670855087376792290}
     - target: {fileID: 4570769903978519194, guid: 3f237796918001149bdade9eac7d05e6, type: 3}
       propertyPath: _elMunicionasBoss
       value: 
@@ -574,6 +582,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7662f433022ab1459cd4d749955f56e, type: 3}
+--- !u!114 &2670855087376792290 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7055181550844286159, guid: f7662f433022ab1459cd4d749955f56e, type: 3}
+  m_PrefabInstance: {fileID: 4970217727270972973}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74744754447028e44b4d83c67684705f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3242355324888257012 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7495936249289146329, guid: f7662f433022ab1459cd4d749955f56e, type: 3}
