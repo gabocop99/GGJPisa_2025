@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6029617790624814975}
   - component: {fileID: 2718802801844985179}
   - component: {fileID: 4853237080930634844}
+  - component: {fileID: 6359132166103666535}
   m_Layer: 0
   m_Name: Bolla
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _datas: {fileID: 11400000, guid: fec9469c8c5e85449be782f8bcd3640a, type: 2}
-  _rimbalzoAmplitude: 0.2
+  _rimbalzoAmplitude: 0.1
   _rimbalzoPeriodo: 10
   _estringaPorSuono: bolla
   Eviento:
@@ -87,6 +88,28 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &6359132166103666535
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324982033693897577}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09f3eec677580364eb801b8773f252ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7119558132378846565
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rimbalzoPeriodo: 4
   _rimbalzoAmplitude: 1
-  _timer: 0
 --- !u!33 &3840253298108743078
 MeshFilter:
   m_ObjectHideFlags: 0
