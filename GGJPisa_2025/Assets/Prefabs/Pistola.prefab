@@ -94,8 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bolla: {fileID: 2718802801844985179, guid: 36427d1108bec22449797eff0fb8a47b, type: 3}
   _elMunicionasBoss: {fileID: 0}
-  _tiempoDeRecarga: 0.2
-  _ritardoDeUnColpoElAltro: 0.4
+  _tiempoDeRecarga: 3
+  _ritardoDeUnColpoElAltro: 0.1
 --- !u!114 &1584088152418122235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,9 +109,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MunicionMaximaNelCarigador: 30
-  MaxReservaDeMunicionas: 120
+  MaxReservaDeMunicionas: 60
   MunicionasCorenteNelCarigador: 0
   MunicionasCorenteNeloZaino: 0
+  chargerFillController: {fileID: 0}
+  InventoryFillController: {fileID: 0}
 --- !u!95 &9200707227747051013
 Animator:
   serializedVersion: 7
