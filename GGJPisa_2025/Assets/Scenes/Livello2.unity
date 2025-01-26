@@ -558,6 +558,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3694.0552, y: 1840.2275, z: 5081.8945}
   m_Center: {x: 0, y: 0.00048828125, z: -0.00390625}
+--- !u!114 &122282817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2670855087376792290, guid: 3a07e1be619c6b94780e01f24b153733, type: 3}
+  m_PrefabInstance: {fileID: 1935979114}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74744754447028e44b4d83c67684705f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &124184664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5364175665787487205, guid: acd343c4d3f3d3748ba818649704a632, type: 3}
@@ -4223,7 +4234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5531593294569615748, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: endHour
-      value: 1080
+      value: 1040
       objectReference: {fileID: 0}
     - target: {fileID: 5531593294569615748, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: GameOverMenu
@@ -4231,7 +4242,7 @@ PrefabInstance:
       objectReference: {fileID: 450155315}
     - target: {fileID: 5531593294569615748, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: startingHour
-      value: 840
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 8336642445591270378, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4940,7 +4951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5531593294569615748, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: endHour
-      value: 1080
+      value: 1040
       objectReference: {fileID: 0}
     - target: {fileID: 5531593294569615748, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: GameOverMenu
@@ -4948,7 +4959,7 @@ PrefabInstance:
       objectReference: {fileID: 450155315}
     - target: {fileID: 5531593294569615748, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: startingHour
-      value: 840
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 8336642445591270378, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5697,6 +5708,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1814987119442951039, guid: 3a07e1be619c6b94780e01f24b153733, type: 3}
+      propertyPath: InventoryFillController
+      value: 
+      objectReference: {fileID: 122282817}
     - target: {fileID: 2720278095164312419, guid: 3a07e1be619c6b94780e01f24b153733, type: 3}
       propertyPath: m_LocalPosition.x
       value: -47.78
@@ -6263,7 +6278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5531593294569615748, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: endHour
-      value: 1080
+      value: 1040
       objectReference: {fileID: 0}
     - target: {fileID: 5531593294569615748, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: GameOverMenu
@@ -6271,7 +6286,7 @@ PrefabInstance:
       objectReference: {fileID: 450155315}
     - target: {fileID: 5531593294569615748, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: startingHour
-      value: 840
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 8336642445591270378, guid: ccca93d3bac2d1144b7205eba2f84ee5, type: 3}
       propertyPath: m_LocalPosition.x
