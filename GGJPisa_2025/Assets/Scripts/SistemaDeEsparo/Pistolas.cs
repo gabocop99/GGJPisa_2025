@@ -60,6 +60,8 @@ namespace SistemaDeEsparo
             Instantiate(_bolla, _puntoDeEsparo.position, _puntoDeEsparo.rotation);
             _elMunicionasBoss.MunicionasCorenteNelCarigador--;
 
+            AudiosManajer.Istanzia.ReproducirSuenoEnLugar("esparo", transform);
+
             if (_elMunicionasBoss.MunicionasCorenteNelCarigador == 0)
             {
                 AudiosManajer.Istanzia.ReproducirSuenoEnLugar("vueto", transform);
