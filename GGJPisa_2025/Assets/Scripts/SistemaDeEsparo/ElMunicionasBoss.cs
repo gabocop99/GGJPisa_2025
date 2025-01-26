@@ -1,5 +1,7 @@
+using HUD;
 using Spanish;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace SistemaDeEsparo
 {
@@ -12,6 +14,18 @@ namespace SistemaDeEsparo
         // Variabili per tenere traccia dello stato corrente
         public int MunicionasCorenteNelCarigador;
         public int MunicionasCorenteNeloZaino;
+
+
+        [FormerlySerializedAs("fillController")]
+        public FillController chargerFillController;
+
+        public FillController InventoryFillController;
+
+        protected override void Ajornamiendo()
+        {
+            chargerFillController.UpdateFill(MunicionasCorenteNelCarigador, MunicionMaximaNelCarigador);
+            InventoryFillController.UpdateFill(MunicionasCorenteNeloZaino, MaxReservaDeMunicionas);
+        }
 
         protected override void Magnana()
         {
