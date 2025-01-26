@@ -1,6 +1,5 @@
 using System.Collections;
 using Spanish;
-using Unity.Mathematics;
 using UnityEngine;
 
 namespace SistemaDeEsparo
@@ -9,15 +8,14 @@ namespace SistemaDeEsparo
     {
         [SerializeField] private LaBolla _bolla;
 
-        [Header("Los Datos De Lo Esparo")] [SerializeField]
-        private int _maxMuniciones;
+        [SerializeField] private ElGestorDeLeMunicionas _elMunicionasBoss;
 
-        [SerializeField] private float _tiempoDeRecarga;
+        [Header("Los Datos De Lo Esparo")] [SerializeField]
+        private float _tiempoDeRecarga;
+
         [SerializeField] private float _ritardoDeUnColpoElAltro;
 
         private Transform _puntoDeEsparo;
-
-        private int _municionesActual;
 
         private Coroutine _recargarCoroutine;
         private Coroutine _esparoCoroutine;
@@ -34,7 +32,12 @@ namespace SistemaDeEsparo
 
             _puntoDeEsparo = puntoDeEsparo.transform;
 
-            _municionesActual = _maxMuniciones;
+            var municionasBoos = GetComponent<ElGestorDeLeMunicionas>();
+
+            if (municionasBoos == null)
+            {
+                Debug.Log("Atencion!! Manca el municionas boss!!!");
+            }
         }
 
         protected override void Ajornamiendo()
@@ -44,7 +47,8 @@ namespace SistemaDeEsparo
                 _recargarCoroutine ??= StartCoroutine(RecargarCoroutine());
             }
 
-            if (Input.GetMouseButton(0) && _recargarCoroutine == null && _municionesActual > 0)
+            if (Input.GetMouseButton(0) && _recargarCoroutine == null &&
+                _elMunicionasBoss.MunicionasCorenteNelCarigador > 0)
             {
                 _esparoCoroutine ??= StartCoroutine(EspararCoroutine());
             }
@@ -52,8 +56,8 @@ namespace SistemaDeEsparo
 
         private IEnumerator EspararCoroutine()
         {
-            var nuevabolla = Instantiate(_bolla, _puntoDeEsparo.position, _puntoDeEsparo.rotation);
-            _municionesActual--;
+            Instantiate(_bolla, _puntoDeEsparo.position, _puntoDeEsparo.rotation);
+            _elMunicionasBoss.MunicionasCorenteNelCarigador--;
             yield return new WaitForSeconds(_ritardoDeUnColpoElAltro);
             _esparoCoroutine = null;
         }
@@ -62,8 +66,7 @@ namespace SistemaDeEsparo
         {
             Debug.Log("Recargando");
             yield return new WaitForSeconds(_tiempoDeRecarga);
-            Debug.Log("RecargaCompletada");
-            _municionesActual = _maxMuniciones;
+            _elMunicionasBoss.Recargar();
             _recargarCoroutine = null;
         }
     }

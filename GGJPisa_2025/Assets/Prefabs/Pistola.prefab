@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 372590648396577080}
   - component: {fileID: 4570769903978519194}
+  - component: {fileID: 1584088152418122235}
   - component: {fileID: 9200707227747051013}
   m_Layer: 0
   m_Name: Pistola
@@ -92,9 +93,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bolla: {fileID: 2718802801844985179, guid: 36427d1108bec22449797eff0fb8a47b, type: 3}
-  _maxMuniciones: 100
+  _elMunicionasBoss: {fileID: 0}
   _tiempoDeRecarga: 0.2
   _ritardoDeUnColpoElAltro: 0.4
+--- !u!114 &1584088152418122235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687756762264748764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413d8fb781063b640814bb31430202f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MunicionMaximaNelCarigador: 30
+  MaxReservaDeMunicionas: 120
+  MunicionasCorenteNelCarigador: 0
 --- !u!95 &9200707227747051013
 Animator:
   serializedVersion: 7

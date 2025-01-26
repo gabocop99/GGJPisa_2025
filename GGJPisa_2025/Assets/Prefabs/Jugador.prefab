@@ -422,6 +422,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4570769903978519194, guid: 3f237796918001149bdade9eac7d05e6, type: 3}
+      propertyPath: _elMunicionasBoss
+      value: 
+      objectReference: {fileID: 1814987119442951039}
     - target: {fileID: 8687756762264748764, guid: 3f237796918001149bdade9eac7d05e6, type: 3}
       propertyPath: m_Name
       value: Pistola
@@ -436,6 +440,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 372590648396577080, guid: 3f237796918001149bdade9eac7d05e6, type: 3}
   m_PrefabInstance: {fileID: 922093207981326980}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1814987119442951039 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1584088152418122235, guid: 3f237796918001149bdade9eac7d05e6, type: 3}
+  m_PrefabInstance: {fileID: 922093207981326980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413d8fb781063b640814bb31430202f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &8314934205334971521 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9200707227747051013, guid: 3f237796918001149bdade9eac7d05e6, type: 3}

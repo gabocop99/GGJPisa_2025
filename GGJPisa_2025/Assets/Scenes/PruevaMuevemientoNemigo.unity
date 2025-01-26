@@ -381,6 +381,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jugador
       objectReference: {fileID: 0}
+    - target: {fileID: 1814987119442951039, guid: 3a07e1be619c6b94780e01f24b153733, type: 3}
+      propertyPath: MaxReservaDeMunicionas
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814987119442951039, guid: 3a07e1be619c6b94780e01f24b153733, type: 3}
+      propertyPath: MunicionMaximaNelCarigador
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2720278095164312419, guid: 3a07e1be619c6b94780e01f24b153733, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.62
