@@ -1,4 +1,5 @@
 using System.Collections;
+using ElevadorSistema;
 using Sirenix.OdinInspector;
 using Spanish;
 using UnityEngine;
@@ -11,6 +12,14 @@ namespace CameraControll
         public Transform Destinationes;
 
         private Coroutine movimiento;
+
+        protected override void Magnana()
+        {
+            var elevador = FindFirstObjectByType<Elevador>();
+
+            elevador.OnElevadorChiamado += PruevaAChiamarMovimiento;
+        }
+
 
         [Button]
         public void PruevaAChiamarMovimiento()
@@ -26,7 +35,7 @@ namespace CameraControll
                     Velocidad * Time.deltaTime);
                 yield return null;
             }
-            
+
             movimiento = null;
         }
     }
