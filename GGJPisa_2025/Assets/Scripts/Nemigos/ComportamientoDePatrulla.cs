@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Spanish;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 namespace Nemigos
 {
@@ -10,9 +11,9 @@ namespace Nemigos
     {
         private NavMeshAgent _agente;
         private int _currentPointIndex = 0;
-        private bool _isWaiting = false;
-        private bool _goingForward = true;
-        public float _waitTimeAtPoint = 0;
+        private bool _estaAspetando = false;
+        private bool _seMueveAvanti = true;
+        public float _tiempoDeAspetarAlaDestinacion = 0;
 
         [SerializeField] private Transform[] _puntosDePatrulla;
 
@@ -39,7 +40,7 @@ namespace Nemigos
                 return;
             }
 
-            if (_agente.remainingDistance <= _agente.stoppingDistance && !_isWaiting)
+            if (_agente.remainingDistance <= _agente.stoppingDistance && !_estaAspetando)
             {
                 StartCoroutine(WaitAtPoint());
             }
@@ -47,10 +48,10 @@ namespace Nemigos
 
         private IEnumerator<WaitForSeconds> WaitAtPoint()
         {
-            _isWaiting = true;
-            yield return new WaitForSeconds(_waitTimeAtPoint);
+            _estaAspetando = true;
+            yield return new WaitForSeconds(_tiempoDeAspetarAlaDestinacion);
 
-            if (_goingForward)
+            if (_seMueveAvanti)
             {
                 if (_currentPointIndex < _puntosDePatrulla.Length - 1)
                 {
@@ -58,7 +59,7 @@ namespace Nemigos
                 }
                 else
                 {
-                    _goingForward = false;
+                    _seMueveAvanti = false;
                     _currentPointIndex--;
                 }
             }
@@ -70,13 +71,13 @@ namespace Nemigos
                 }
                 else
                 {
-                    _goingForward = true;
+                    _seMueveAvanti = true;
                     _currentPointIndex++;
                 }
             }
 
             _agente.SetDestination(_puntosDePatrulla[_currentPointIndex].position);
-            _isWaiting = false;
+            _estaAspetando = false;
         }
     }
 }

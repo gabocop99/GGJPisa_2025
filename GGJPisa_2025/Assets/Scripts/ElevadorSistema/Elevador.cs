@@ -10,7 +10,12 @@ namespace ElevadorSistema
 
         private void Start()
         {
-            ManajerDeNemigos.Istanzia.OnTodosNemigosLiberado += ChiamaElevador;
+            var manajero = FindFirstObjectByType<ManajerDeNemigos>();
+
+            if (manajero != null)
+            {
+                ManajerDeNemigos.Istanzia.OnTodosNemigosLiberado += ChiamaElevador;
+            }
         }
 
         private void ChiamaElevador()
