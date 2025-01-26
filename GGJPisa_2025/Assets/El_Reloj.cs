@@ -22,7 +22,10 @@ using TMPro;
 
         if(currentHour >= endHour) 
         {
-            Debug.Log("lose");
+
+            Time.timeScale = 0;
+            //GameOverMenu.setActive(true);
+            Debug.Log("open lose menu");
         }
     }
 }
