@@ -1,4 +1,3 @@
-using System;
 using Character;
 using Patterns;
 using UnityEngine;
