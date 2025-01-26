@@ -7,6 +7,8 @@ namespace Nemigos
     [RequireComponent(typeof(GestorDeBersallos), typeof(ComportamientoDePatrulla), typeof(ComportamientoDeLiberdad))]
     public class GestorDeStadoDeNemigo : SoltieroComportamiento
     {
+        [SerializeField] private Animator _parmide;
+
         private GestorDeBersallos _gestorDeBersallos;
         private ComportamientoDePatrulla _comportamientoDePatrulla;
         private ComportamientoDeLiberdad _comportamientoDeLiberdad;
@@ -25,6 +27,7 @@ namespace Nemigos
             _comportamientoDePatrulla = GetComponent<ComportamientoDePatrulla>();
             _comportamientoDeLiberdad = GetComponent<ComportamientoDeLiberdad>();
             _gestorDeBersallos.BersallosDestruidos += SuBersallosDestruidos;
+            _parmide = GetComponentInChildren<Animator>();
         }
 
         private void SuBersallosDestruidos()
@@ -33,6 +36,7 @@ namespace Nemigos
             _comportamientoDePatrulla.enabled = false;
             _comportamientoDeLiberdad.enabled = true;
             IsHappy = true;
+            _parmide.SetBool("ishappy", true);
         }
     }
 }
