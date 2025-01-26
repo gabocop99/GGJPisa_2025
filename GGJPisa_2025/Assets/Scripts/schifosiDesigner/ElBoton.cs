@@ -19,4 +19,19 @@ public class ElBoton : MonoBehaviour
     {
         Debug.Log("menu is clicked");
     }
+
+
+    public void AlMenu()
+    {
+        Time.timeScale = 1;  // Unpause the game
+        Debug.Log("load main menu");
+        SceneManager.LoadScene(0);
+    }
+
+    public void AlProximoLivel()
+    {
+        Time.timeScale = 1;  // Unpause the game
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    
 }
